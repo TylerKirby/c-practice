@@ -15,7 +15,7 @@ int main() {
     print_board(board_state);
 
     get_player_markers(&player_marker, &computer_marker);
-    printf("Player marker: %c\nComputer marker: %c", player_marker, computer_marker);
+    printf("Player marker: %c\nComputer marker: %c\n", player_marker, computer_marker);
 }
 
 // Print current board to stdout
