@@ -3,14 +3,17 @@
  */
 #include <stdio.h>
 
-#define MAX_LINE_LENGTH 1000
-#define MAX_NUMBER_OF_LINES 1000
+#define MAX_LINE_LENGTH 100
+#define MAX_NUMBER_OF_LINES 10
+
+int remove_trailing_space(const char line[]);
 
 int main() {
-    int curr_char, line_incr, lines_incr, is_blank;
-    char lines[MAX_LINE_LENGTH][MAX_NUMBER_OF_LINES];
+    char curr_char;
+    int line_incr, lines_incr, new_eol;
+    char lines[MAX_NUMBER_OF_LINES][MAX_LINE_LENGTH] = {0};
 
-    line_incr = lines_incr = is_blank = 0;
+    line_incr = lines_incr = 0;
 
     while ((curr_char = getchar()) != EOF) {
         if (curr_char != '\n') {
@@ -19,10 +22,25 @@ int main() {
         } else {
             lines[lines_incr][line_incr] = '\0';
             ++lines_incr;
+            line_incr = 0;
         }
     }
 
     for (int i = 0; i < lines_incr; ++i) {
-        printf("%s\n", lines[i]);
+        if (lines[i][0] != '\n') {
+            new_eol = remove_trailing_space(lines[i]);
+            lines[i][new_eol + 1] = '\0';
+            printf("%s\n", lines[i]);
+        }
     }
-};
+}
+
+// Return index of new EOL
+int remove_trailing_space(const char line[]) {
+    for (int i = MAX_LINE_LENGTH; i > 0; --i) {
+        if ((line[i] > 32) && (line[i] < 127)) {
+            return i;
+        }
+    }
+    return 0;
+}
