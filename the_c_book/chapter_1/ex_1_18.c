@@ -27,7 +27,7 @@ int main() {
     }
 
     for (int i = 0; i < lines_incr; ++i) {
-        if (lines[i][0] != '\n') {
+        if (lines[i][0] != '\0') {
             new_eol = remove_trailing_space(lines[i]);
             lines[i][new_eol + 1] = '\0';
             printf("%s\n", lines[i]);
@@ -37,7 +37,7 @@ int main() {
 
 // Return index of new EOL
 int remove_trailing_space(const char line[]) {
-    for (int i = MAX_LINE_LENGTH; i > 0; --i) {
+    for (int i = MAX_LINE_LENGTH-1; i > 0; --i) {
         if ((line[i] > 32) && (line[i] < 127)) {
             return i;
         }
