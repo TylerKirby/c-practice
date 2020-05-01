@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="ex_1_18">
-				<Option output="/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/ex_1_18" prefix_auto="0" extension_auto="0"/>
+			<Target title="ex_1_19">
+				<Option output="/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/ex_1_19" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -52,14 +52,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex_1_18"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex_1_19"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="ex_1_18/fast">
-				<Option output="/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/ex_1_18" prefix_auto="0" extension_auto="0"/>
+			<Target title="ex_1_19/fast">
+				<Option output="/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/ex_1_19" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -73,15 +73,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex_1_18/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex_1_19/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/tyler/Projects/c-practice/the_c_book/chapter_1/ex_1_18.c">
-			<Option target="ex_1_18"/>
+		<Unit filename="/Users/tyler/Projects/c-practice/the_c_book/chapter_1/ex_1_19.c">
+			<Option target="ex_1_19"/>
 		</Unit>
 		<Unit filename="/Users/tyler/Projects/c-practice/the_c_book/chapter_1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
