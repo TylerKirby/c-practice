@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-b
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -148,6 +148,19 @@ ex_1_20: cmake_check_build_system
 ex_1_20/fast:
 	$(MAKE) -f CMakeFiles/ex_1_20.dir/build.make CMakeFiles/ex_1_20.dir/build
 .PHONY : ex_1_20/fast
+
+#=============================================================================
+# Target rules for targets named ex_1_21
+
+# Build rule for target.
+ex_1_21: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ex_1_21
+.PHONY : ex_1_21
+
+# fast build rule for target.
+ex_1_21/fast:
+	$(MAKE) -f CMakeFiles/ex_1_21.dir/build.make CMakeFiles/ex_1_21.dir/build
+.PHONY : ex_1_21/fast
 
 ex_1_18.o: ex_1_18.c.o
 
@@ -230,17 +243,45 @@ ex_1_20.c.s:
 	$(MAKE) -f CMakeFiles/ex_1_20.dir/build.make CMakeFiles/ex_1_20.dir/ex_1_20.c.s
 .PHONY : ex_1_20.c.s
 
+ex_1_21.o: ex_1_21.c.o
+
+.PHONY : ex_1_21.o
+
+# target to build an object file
+ex_1_21.c.o:
+	$(MAKE) -f CMakeFiles/ex_1_21.dir/build.make CMakeFiles/ex_1_21.dir/ex_1_21.c.o
+.PHONY : ex_1_21.c.o
+
+ex_1_21.i: ex_1_21.c.i
+
+.PHONY : ex_1_21.i
+
+# target to preprocess a source file
+ex_1_21.c.i:
+	$(MAKE) -f CMakeFiles/ex_1_21.dir/build.make CMakeFiles/ex_1_21.dir/ex_1_21.c.i
+.PHONY : ex_1_21.c.i
+
+ex_1_21.s: ex_1_21.c.s
+
+.PHONY : ex_1_21.s
+
+# target to generate assembly for a file
+ex_1_21.c.s:
+	$(MAKE) -f CMakeFiles/ex_1_21.dir/build.make CMakeFiles/ex_1_21.dir/ex_1_21.c.s
+.PHONY : ex_1_21.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... ex_1_18"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... ex_1_18"
 	@echo "... ex_1_19"
 	@echo "... ex_1_20"
+	@echo "... ex_1_21"
 	@echo "... ex_1_18.o"
 	@echo "... ex_1_18.i"
 	@echo "... ex_1_18.s"
@@ -250,6 +291,9 @@ help:
 	@echo "... ex_1_20.o"
 	@echo "... ex_1_20.i"
 	@echo "... ex_1_20.s"
+	@echo "... ex_1_21.o"
+	@echo "... ex_1_21.i"
+	@echo "... ex_1_21.s"
 .PHONY : help
 
 

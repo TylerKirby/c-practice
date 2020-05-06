@@ -56,6 +56,7 @@ CMAKE_BINARY_DIR = /Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-b
 all: CMakeFiles/ex_1_18.dir/all
 all: CMakeFiles/ex_1_19.dir/all
 all: CMakeFiles/ex_1_20.dir/all
+all: CMakeFiles/ex_1_21.dir/all
 
 .PHONY : all
 
@@ -68,6 +69,7 @@ preinstall:
 clean: CMakeFiles/ex_1_18.dir/clean
 clean: CMakeFiles/ex_1_19.dir/clean
 clean: CMakeFiles/ex_1_20.dir/clean
+clean: CMakeFiles/ex_1_21.dir/clean
 
 .PHONY : clean
 
@@ -151,6 +153,33 @@ ex_1_20: CMakeFiles/ex_1_20.dir/rule
 CMakeFiles/ex_1_20.dir/clean:
 	$(MAKE) -f CMakeFiles/ex_1_20.dir/build.make CMakeFiles/ex_1_20.dir/clean
 .PHONY : CMakeFiles/ex_1_20.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ex_1_21.dir
+
+# All Build rule for target.
+CMakeFiles/ex_1_21.dir/all:
+	$(MAKE) -f CMakeFiles/ex_1_21.dir/build.make CMakeFiles/ex_1_21.dir/depend
+	$(MAKE) -f CMakeFiles/ex_1_21.dir/build.make CMakeFiles/ex_1_21.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target ex_1_21"
+.PHONY : CMakeFiles/ex_1_21.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ex_1_21.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ex_1_21.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/ex_1_21.dir/rule
+
+# Convenience name for target.
+ex_1_21: CMakeFiles/ex_1_21.dir/rule
+
+.PHONY : ex_1_21
+
+# clean rule for target.
+CMakeFiles/ex_1_21.dir/clean:
+	$(MAKE) -f CMakeFiles/ex_1_21.dir/build.make CMakeFiles/ex_1_21.dir/clean
+.PHONY : CMakeFiles/ex_1_21.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

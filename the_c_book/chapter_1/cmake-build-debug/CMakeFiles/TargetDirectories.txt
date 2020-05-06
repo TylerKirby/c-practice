@@ -1,5 +1,6 @@
-/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles/ex_1_18.dir
-/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles/ex_1_18.dir
 /Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles/ex_1_19.dir
 /Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles/ex_1_20.dir
+/Users/tyler/Projects/c-practice/the_c_book/chapter_1/cmake-build-debug/CMakeFiles/ex_1_21.dir
