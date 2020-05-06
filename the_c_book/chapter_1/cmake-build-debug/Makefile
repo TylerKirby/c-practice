@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ex_1_18
+
+# Build rule for target.
+ex_1_18: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ex_1_18
+.PHONY : ex_1_18
+
+# fast build rule for target.
+ex_1_18/fast:
+	$(MAKE) -f CMakeFiles/ex_1_18.dir/build.make CMakeFiles/ex_1_18.dir/build
+.PHONY : ex_1_18/fast
+
+#=============================================================================
+# Target rules for targets named ex_1_19
+
+# Build rule for target.
+ex_1_19: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ex_1_19
+.PHONY : ex_1_19
+
+# fast build rule for target.
+ex_1_19/fast:
+	$(MAKE) -f CMakeFiles/ex_1_19.dir/build.make CMakeFiles/ex_1_19.dir/build
+.PHONY : ex_1_19/fast
+
+#=============================================================================
 # Target rules for targets named ex_1_20
 
 # Build rule for target.
@@ -122,6 +148,60 @@ ex_1_20: cmake_check_build_system
 ex_1_20/fast:
 	$(MAKE) -f CMakeFiles/ex_1_20.dir/build.make CMakeFiles/ex_1_20.dir/build
 .PHONY : ex_1_20/fast
+
+ex_1_18.o: ex_1_18.c.o
+
+.PHONY : ex_1_18.o
+
+# target to build an object file
+ex_1_18.c.o:
+	$(MAKE) -f CMakeFiles/ex_1_18.dir/build.make CMakeFiles/ex_1_18.dir/ex_1_18.c.o
+.PHONY : ex_1_18.c.o
+
+ex_1_18.i: ex_1_18.c.i
+
+.PHONY : ex_1_18.i
+
+# target to preprocess a source file
+ex_1_18.c.i:
+	$(MAKE) -f CMakeFiles/ex_1_18.dir/build.make CMakeFiles/ex_1_18.dir/ex_1_18.c.i
+.PHONY : ex_1_18.c.i
+
+ex_1_18.s: ex_1_18.c.s
+
+.PHONY : ex_1_18.s
+
+# target to generate assembly for a file
+ex_1_18.c.s:
+	$(MAKE) -f CMakeFiles/ex_1_18.dir/build.make CMakeFiles/ex_1_18.dir/ex_1_18.c.s
+.PHONY : ex_1_18.c.s
+
+ex_1_19.o: ex_1_19.c.o
+
+.PHONY : ex_1_19.o
+
+# target to build an object file
+ex_1_19.c.o:
+	$(MAKE) -f CMakeFiles/ex_1_19.dir/build.make CMakeFiles/ex_1_19.dir/ex_1_19.c.o
+.PHONY : ex_1_19.c.o
+
+ex_1_19.i: ex_1_19.c.i
+
+.PHONY : ex_1_19.i
+
+# target to preprocess a source file
+ex_1_19.c.i:
+	$(MAKE) -f CMakeFiles/ex_1_19.dir/build.make CMakeFiles/ex_1_19.dir/ex_1_19.c.i
+.PHONY : ex_1_19.c.i
+
+ex_1_19.s: ex_1_19.c.s
+
+.PHONY : ex_1_19.s
+
+# target to generate assembly for a file
+ex_1_19.c.s:
+	$(MAKE) -f CMakeFiles/ex_1_19.dir/build.make CMakeFiles/ex_1_19.dir/ex_1_19.c.s
+.PHONY : ex_1_19.c.s
 
 ex_1_20.o: ex_1_20.c.o
 
@@ -156,9 +236,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... ex_1_18"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... ex_1_19"
 	@echo "... ex_1_20"
+	@echo "... ex_1_18.o"
+	@echo "... ex_1_18.i"
+	@echo "... ex_1_18.s"
+	@echo "... ex_1_19.o"
+	@echo "... ex_1_19.i"
+	@echo "... ex_1_19.s"
 	@echo "... ex_1_20.o"
 	@echo "... ex_1_20.i"
 	@echo "... ex_1_20.s"
