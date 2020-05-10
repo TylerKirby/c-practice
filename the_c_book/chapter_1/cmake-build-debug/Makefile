@@ -162,6 +162,19 @@ ex_1_21/fast:
 	$(MAKE) -f CMakeFiles/ex_1_21.dir/build.make CMakeFiles/ex_1_21.dir/build
 .PHONY : ex_1_21/fast
 
+#=============================================================================
+# Target rules for targets named ex_1_22
+
+# Build rule for target.
+ex_1_22: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ex_1_22
+.PHONY : ex_1_22
+
+# fast build rule for target.
+ex_1_22/fast:
+	$(MAKE) -f CMakeFiles/ex_1_22.dir/build.make CMakeFiles/ex_1_22.dir/build
+.PHONY : ex_1_22/fast
+
 ex_1_18.o: ex_1_18.c.o
 
 .PHONY : ex_1_18.o
@@ -270,6 +283,33 @@ ex_1_21.c.s:
 	$(MAKE) -f CMakeFiles/ex_1_21.dir/build.make CMakeFiles/ex_1_21.dir/ex_1_21.c.s
 .PHONY : ex_1_21.c.s
 
+ex_1_22.o: ex_1_22.c.o
+
+.PHONY : ex_1_22.o
+
+# target to build an object file
+ex_1_22.c.o:
+	$(MAKE) -f CMakeFiles/ex_1_22.dir/build.make CMakeFiles/ex_1_22.dir/ex_1_22.c.o
+.PHONY : ex_1_22.c.o
+
+ex_1_22.i: ex_1_22.c.i
+
+.PHONY : ex_1_22.i
+
+# target to preprocess a source file
+ex_1_22.c.i:
+	$(MAKE) -f CMakeFiles/ex_1_22.dir/build.make CMakeFiles/ex_1_22.dir/ex_1_22.c.i
+.PHONY : ex_1_22.c.i
+
+ex_1_22.s: ex_1_22.c.s
+
+.PHONY : ex_1_22.s
+
+# target to generate assembly for a file
+ex_1_22.c.s:
+	$(MAKE) -f CMakeFiles/ex_1_22.dir/build.make CMakeFiles/ex_1_22.dir/ex_1_22.c.s
+.PHONY : ex_1_22.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +322,7 @@ help:
 	@echo "... ex_1_19"
 	@echo "... ex_1_20"
 	@echo "... ex_1_21"
+	@echo "... ex_1_22"
 	@echo "... ex_1_18.o"
 	@echo "... ex_1_18.i"
 	@echo "... ex_1_18.s"
@@ -294,6 +335,9 @@ help:
 	@echo "... ex_1_21.o"
 	@echo "... ex_1_21.i"
 	@echo "... ex_1_21.s"
+	@echo "... ex_1_22.o"
+	@echo "... ex_1_22.i"
+	@echo "... ex_1_22.s"
 .PHONY : help
 
 
