@@ -10,17 +10,23 @@
 
 
 int main() {
-    int curr_char, curr_line_len, incr;
-    char input[MAX_INPUT_SIZE];
+    int curr_char, curr_line_len, incr, temp_incr;
+    char input[MAX_INPUT_SIZE] = {0};
 
     curr_line_len = incr = 0;
-    while((curr_char = getchar()) != EOF) {
+    while ((curr_char = getchar()) != EOF) {
         if (curr_line_len < MAX_LINE_SIZE) {
             input[incr] = curr_char;
             ++incr;
             ++curr_line_len;
         } else {
+            temp_incr = incr;
+            while (input[incr] != ' ') {
+                --incr;
+            }
             input[incr] = '\n';
+            incr = temp_incr;
+            input[incr] = ' ';
             input[incr+1] = curr_char;
             incr = incr + 2;
             curr_line_len = 0;
