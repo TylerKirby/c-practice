@@ -6,22 +6,33 @@
 
 #define MAX_INPUT 1000
 
+// TODO: This is partially finished. It works on single line comments though messes up the spacing of the subsequent line.
+// TODO: This should support multiline comments and should test comments in quotes.
+
 int main() {
-    int in_quotes, incr;
+    int in_quotes, in_comment, incr;
     char curr_char;
     char input[MAX_INPUT] = {0};
 
-    in_quotes = incr = 0;
+    in_quotes = incr = in_comment = 0;
     while ((curr_char = getchar()) != EOF) {
         // Set quotes flag
-        if (curr_char == '\'') {
-           in_quotes = in_quotes == 0 ? 1 : 0;
+        if ((curr_char == '\'') && (in_quotes == 0)) {
+           in_quotes = 1;
+        } else if ((curr_char == '\'') && (in_quotes == 1)) {
+            in_quotes = 0;
         }
 
         // Handle single line comments
-        if ((curr_char != '/' && input[incr-1] != '/') || (in_quotes == 1)) {
+        if (((curr_char != '/' && input[incr-1] != '/') || (in_quotes == 1)) && (in_comment == 0)) {
             input[incr] = curr_char;
             ++incr;
+        } else {
+            in_comment = 1;
+        }
+
+        if ((curr_char == '\n') && (in_comment == 1)) {
+            in_comment = 0;
         }
     }
 
