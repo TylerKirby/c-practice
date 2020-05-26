@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 99)
 
 add_executable(ex_2_1 ex_2_1.c)
 add_executable(ex_2_2 ex_2_2.c)
+add_executable(ex_2_3 ex_2_3.c)

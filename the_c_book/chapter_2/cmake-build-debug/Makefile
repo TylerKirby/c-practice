@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ex_2_3
+
+# Build rule for target.
+ex_2_3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ex_2_3
+.PHONY : ex_2_3
+
+# fast build rule for target.
+ex_2_3/fast:
+	$(MAKE) -f CMakeFiles/ex_2_3.dir/build.make CMakeFiles/ex_2_3.dir/build
+.PHONY : ex_2_3/fast
+
+#=============================================================================
 # Target rules for targets named ex_2_2
 
 # Build rule for target.
@@ -190,12 +203,40 @@ ex_2_2.c.s:
 	$(MAKE) -f CMakeFiles/ex_2_2.dir/build.make CMakeFiles/ex_2_2.dir/ex_2_2.c.s
 .PHONY : ex_2_2.c.s
 
+ex_2_3.o: ex_2_3.c.o
+
+.PHONY : ex_2_3.o
+
+# target to build an object file
+ex_2_3.c.o:
+	$(MAKE) -f CMakeFiles/ex_2_3.dir/build.make CMakeFiles/ex_2_3.dir/ex_2_3.c.o
+.PHONY : ex_2_3.c.o
+
+ex_2_3.i: ex_2_3.c.i
+
+.PHONY : ex_2_3.i
+
+# target to preprocess a source file
+ex_2_3.c.i:
+	$(MAKE) -f CMakeFiles/ex_2_3.dir/build.make CMakeFiles/ex_2_3.dir/ex_2_3.c.i
+.PHONY : ex_2_3.c.i
+
+ex_2_3.s: ex_2_3.c.s
+
+.PHONY : ex_2_3.s
+
+# target to generate assembly for a file
+ex_2_3.c.s:
+	$(MAKE) -f CMakeFiles/ex_2_3.dir/build.make CMakeFiles/ex_2_3.dir/ex_2_3.c.s
+.PHONY : ex_2_3.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... ex_2_3"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ex_2_2"
@@ -206,6 +247,9 @@ help:
 	@echo "... ex_2_2.o"
 	@echo "... ex_2_2.i"
 	@echo "... ex_2_2.s"
+	@echo "... ex_2_3.o"
+	@echo "... ex_2_3.i"
+	@echo "... ex_2_3.s"
 .PHONY : help
 
 
