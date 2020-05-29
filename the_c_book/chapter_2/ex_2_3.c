@@ -3,8 +3,10 @@
  * equivalent integer value. The allowable digits are 0 through 9,a through f,and A through F.
  */
 #include <stdio.h>
+#include <ctype.h>
+#include <math.h>
 
-#define MAX_INPUT 100
+#define MAX_INPUT 10
 
 int get_hex_value(char c);
 
@@ -13,13 +15,24 @@ int main() {
     char c;
     char input[MAX_INPUT] = {0};
 
-    // TODO: Force char to lower
-    // TODO: convert char to hex
-
     while((c = getchar()) != '\n') {
+        if (isalpha(c)) {
+            c = tolower(c);
+        }
         input[i] = c;
         ++i;
     }
+
+    int pow_index = 0;
+    int result = 0;
+    for (int j = i-1; j >= 0; --j) {
+        if (input[j] != 'x') {
+            result = get_hex_value(input[j]) * pow(16, pow_index) + result;
+            ++pow_index;
+        }
+    }
+
+    printf("hex %s to decimal = %i", input, result);
 }
 
 int get_hex_value(char c) {
@@ -56,6 +69,6 @@ int get_hex_value(char c) {
     } else if (c == 'f') {
         return 15;
     } else {
-        printf("%c is not a valid hex char");
+        printf("%c is not a valid hex char", c);
     }
 }

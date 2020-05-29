@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tyler/Projects/c-practice/the_c_book/chapter_2/ex_2_3.c
+stdio.h
+-
+ctype.h
+-
+math.h
+-
+
