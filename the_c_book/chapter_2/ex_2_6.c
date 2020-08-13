@@ -31,6 +31,11 @@ int main() {
 }
 
 unsigned setbits(unsigned x, int p, int n, unsigned y) {
-    return 0
+    unsigned last_n_bits_y, first_n_bits_x;
+
+    last_n_bits_y = y & ~(~0 << n);
+    first_n_bits_x = x & (~0 << n);
+
+    return first_n_bits_x | last_n_bits_y;
 }
 
