@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 project(chapter_2)
 
-set(CMAKE_CXX_STANDARD 99)
+set(CMAKE_C_COMPILER "gcc")
 
 add_executable(ex_2_1 ex_2_1.c)
 add_executable(ex_2_2 ex_2_2.c)
@@ -14,3 +14,4 @@ add_executable(ex_2_7 ex_2_7.c)
 add_executable(ex_2_8 ex_2_8.c)
 add_executable(bitcount bitcount.c)
 add_executable(ex_2_9 ex_2_9.c)
+add_executable(ex_2_10 ex_2_10.c)
